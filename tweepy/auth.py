@@ -87,7 +87,11 @@ class OAuthHandler(AuthHandler):
 
             return request.to_url()
         except Exception, e:
-            
+            import logging
+            import traceback
+            log = logging.getLogger("app")
+            log.info(e.message)
+            log.info(traceback.format_exc())
             raise TweepError(e)
 
     def get_access_token(self, verifier=None):
