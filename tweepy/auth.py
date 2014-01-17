@@ -87,6 +87,7 @@ class OAuthHandler(AuthHandler):
 
             return request.to_url()
         except Exception, e:
+            
             raise TweepError(e)
 
     def get_access_token(self, verifier=None):
@@ -110,6 +111,11 @@ class OAuthHandler(AuthHandler):
             self.access_token = oauth.OAuthToken.from_string(resp.read())
             return self.access_token
         except Exception, e:
+            import logging
+            import traceback
+            log = logging.getLogger("app")
+            log.info(e.message)
+            log.info(traceback.format_exc())
             raise TweepError(e)
 
     def get_xauth_access_token(self, username, password):
