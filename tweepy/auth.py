@@ -40,7 +40,8 @@ class OAuthHandler(AuthHandler):
         if self.secure or secure:
             prefix = 'https://'
         else:
-            prefix = 'http://'
+            # aganzha!
+            prefix = 'https://'
 
         return prefix + self.OAUTH_HOST + self.OAUTH_ROOT + endpoint
 
