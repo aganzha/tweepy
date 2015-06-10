@@ -1,3 +1,41 @@
+Version 3.3.0
+-------------
+  - Loosen our dependency requirements for Requests (>= 2.4.3)
+  - Fix issue with streams freezing up on Python 3 (Issue #556)
+  - Add keep_alive() callback to StreamListener when keep alive messages arrive
+  - Fix issue with stream session headers not being used when restarting connection
+  - Fix issue with streams getting stuck in a loop when connection dies. (PR #561)
+
+Version 3.2.0
+-------------
+  - Remove deprecated trends methods.
+  - Fix tweepy.debug() to work in Python 3.
+  - Fixed issue #529 - StreamListener language filter stopped working.
+  - Add Documentation Page for streaming.
+  - Add media/upload endpoint.
+  - Add media_ids parameter to update_status().
+
+Version 3.1.0
+-------------
+  - Allow specifying your own ssl certificates for streaming client.
+  - Distribute Python Wheels instead of dumb binaries.
+  - Fix cursor invocation, passing args to underlying method. (https://github.com/tweepy/tweepy/issues/515)
+  - Upgrade to Request 2.4.3
+
+Version 3.0
+-----------
+  - Added multiple list members operation api methods (add_list_members, remove_list_members).
+  - Added sitestream endpoint.
+  - Switch to using Requests instead of httplib.
+  - Fully removed support for non-secure HTTP.
+  - Proxy support.
+  - Add API method for /statuses/lookup.json
+  - Add missing 'count' parameter to followers_ids
+  - Added allowed_param to update_profile_image
+  - Comparison between Status objects
+  - Extend on_data method by including a conditional to process warning messages and add the definition of the method to manage those warning messages
+  - Better Python 3 support.
+
 Version 2.2
 -----------
   - Added update_profile_banner endpoint.
@@ -16,6 +54,17 @@ Version 2.2
 "disconnect" messages arrive from Twitter before connection is killed.
     - https://dev.twitter.com/docs/streaming-apis/messages#Disconnect_messages_disconnect
   - [Compare View](https://github.com/tweepy/tweepy/compare/2.1...2.2)
+  - Use HTTPS by default.
+  - Support setting the starting cursor postion (ex: Ex:
+    Cursor(api.friends_ids, cursor=123456))
+  - Added API.cached_result instance flag that is "True" when cached result is returned.
+  - New Streaming client callbacks
+    - on_event(status): called when new events arrive
+    - on_direct_message(status): called when a new direct message
+      arrives.
+  - Improvements to streaming client re-connection behavior /
+    configuration.
+(https://github.com/tweepy/tweepy/commit/447f69cd3de67b0d241b9d4f669ecc9b9c0cdb54)
 
 Version 2.1
 -----------

@@ -1,8 +1,11 @@
 Tweepy: Twitter for Python!
 ======
-[![Build Status](https://travis-ci.org/tweepy/tweepy.png)](https://travis-ci.org/tweepy/tweepy)
-[![Downloads](https://pypip.in/d/tweepy/badge.png)](https://crate.io/packages/tweepy) [![Downloads](https://pypip.in/v/tweepy/badge.png)](https://crate.io/packages/tweepy)
-[![Coverage Status](https://coveralls.io/repos/tweepy/tweepy/badge.png?branch=master)](https://coveralls.io/r/tweepy/tweepy?branch=master)
+
+[![Join the chat at https://gitter.im/tweepy/tweepy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tweepy/tweepy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](http://img.shields.io/travis/tweepy/tweepy/master.svg?style=flat)](https://travis-ci.org/tweepy/tweepy)
+[![Documentation Status](http://img.shields.io/badge/docs-v3.1.0-brightgreen.svg?style=flat)](http://docs.tweepy.org)
+[![Downloads](http://img.shields.io/pypi/dm/tweepy.svg?style=flat)](https://crate.io/packages/tweepy) [![Version](http://img.shields.io/pypi/v/tweepy.svg?style=flat)](https://crate.io/packages/tweepy)
+[![Coverage Status](https://img.shields.io/coveralls/tweepy/tweepy/master.svg?style=flat)](https://coveralls.io/r/tweepy/tweepy?branch=master)
 
 Installation
 ------------
@@ -15,19 +18,17 @@ You may also use Git to clone the repository from
 Github and install it manually:
 
     git clone https://github.com/tweepy/tweepy.git
+    cd tweepy
     python setup.py install
 
-**Note** only Python 2.6 and 2.7 is supported at
-the moment. The Python 3 family is not yet supported.
+Python 2.6 and 2.7, 3.3 & 3.4 are supported.
 
 Documentation
 -------------
   - [Website (Work in-progress)](http://tweepy.github.com/)
   - [Twitter Developers](http://dev.twitter.com/)
-  - [Python Package Documentation](http://packages.python.org/tweepy/html/index.html)
 
 Community
 ---------
-  - [Google Group/Mailing list](http://groups.google.com/group/tweepy)
+  - [Discussion Forum](http://discuss.tweepy.org)
   - IRC Chat (Freenode.net #tweepy)
-
